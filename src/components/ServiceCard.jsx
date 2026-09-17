@@ -16,7 +16,7 @@ export default function ServiceCard({ service }) {
         <p className="mt-4 leading-7 text-muted">{service.description}</p>
       </div>
       <div className="mt-8 flex items-center justify-between border-t border-ink/10 pt-5">
-        <span className="text-sm font-semibold text-ink">Explore service</span>
+        <span className="text-sm font-semibold text-ink"><a href="#contact">Explore service</a></span>
         <ArrowIcon
           className="h-5 w-5 text-ink transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
           aria-hidden="true"

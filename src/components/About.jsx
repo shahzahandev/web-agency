@@ -2,11 +2,12 @@ import { useRef } from "react";
 import ImagePlaceholder from "./ImagePlaceholder";
 import SectionHeader from "./SectionHeader";
 import { useGsap } from "../hooks/useGsap";
+import project from "../assets/project.png"
 
 const stats = [
   { value: "20+", label: "Projects" },
-  { value: "10+", label: "Happy Clients" },
-  { value: "3+", label: "Years of Learning" },
+  { value: "15+", label: "Happy Clients" },
+  { value: "2+", label: "Years of Learning" },
 ];
 
 export default function About() {
@@ -37,7 +38,7 @@ export default function About() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
         <div className="about-image">
           <ImagePlaceholder className="aspect-[4/5] border-white/10 bg-[#101010] lg:aspect-[5/6]">
-            Add about image here later
+            <img src={project} alt="Web design and development agency" className="h-full w-full object-cover scale-125" />
           </ImagePlaceholder>
         </div>
 

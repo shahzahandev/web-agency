@@ -1,9 +1,9 @@
-# Dependency directories (Never commit these)
+# Dependencies
 node_modules/
 jspm_packages/
 web_modules/
 
-# Logs
+# Debug and log files
 logs
 *.log
 npm-debug.log*
@@ -11,49 +11,35 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Environment variables and secrets
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env.sample
-
-# Diagnostic reports
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-# Runtime data
+# Runtime data and process IDs
 pids
 *.pid
 *.seed
 *.pid.lock
 
+# Environment variables (Contains sensitive API keys and secrets)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.test
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
 # Testing and Coverage
 coverage/
-*.lcov
-.nyc_output
+.nyc_output/
 
-# Build and Output directories
+# Build and Compilation outputs
 dist/
-build/
-out/
-.next/
-.nuxt/
-.output/
+build/Release
+.node_repl_history
+*.tsbuildinfo
 
-# Cache layers
-.eslintcache
-.npm
-.pnpm-store
-.yarn/cache
-.parcel-cache
-.cache/
-
-# IDEs and Editors
+# IDEs, editors and OS-specific files
 .vscode/
 .idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.swp
+.DS_Store
+Thumbs.db

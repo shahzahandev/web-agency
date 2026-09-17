@@ -1,28 +1,43 @@
 import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { services } from "../data/services";
 import { useGsap } from "../hooks/useGsap";
 import SectionHeader from "./SectionHeader";
 import ServiceCard from "./ServiceCard";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
   const sectionRef = useRef(null);
 
   useGsap(sectionRef, ({ gsap }) => {
     gsap.from(".services-header", {
-      y: 54,
+      y: 30,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "power3.out",
-      scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
+      scrollTrigger: { trigger: sectionRef.current, start: "top 95%" },
     });
 
-    gsap.from(".service-card", {
-      y: 80,
-      opacity: 0,
-      stagger: 0.12,
-      duration: 0.8,
-      ease: "power3.out",
-      scrollTrigger: { trigger: ".services-grid", start: "top 80%" },
+    // batch() দিয়ে প্রতিটা কার্ড নিজে ভিউপোর্টে ঢুকলে অ্যানিমেট হয়;
+    // trigger point আরও নিচে (95%) নামিয়ে ও duration/stagger/দূরত্ব
+    // কমিয়ে কন্টেন্ট দ্রুত ভিজিবল করা হয়েছে
+    const cards = gsap.utils.toArray(".service-card", sectionRef.current);
+    gsap.set(cards, { y: 30, opacity: 0 });
+
+    ScrollTrigger.batch(cards, {
+      start: "top 95%",
+      onEnter: (batch) =>
+        gsap.to(batch, {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power3.out",
+          stagger: 0.06,
+          overwrite: "auto",
+        }),
+      once: true,
     });
   }, []);
 
