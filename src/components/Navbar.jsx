@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { Menu, X } from "lucide-react";
+import { Menu, Sparkles, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -81,9 +81,9 @@ export default function Navbar() {
         aria-label="Primary navigation"
       >
         <a href="#home" className="group flex items-center gap-3" aria-label="Nova Studio home">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-ink text-sm font-black text-acid">
-            N
-          </span>
+            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-ink text-acid">
+                <Sparkles className="h-5 w-5" />
+              </span>
           <span className="font-display text-sm font-bold uppercase leading-4 tracking-[0.18em] text-ink">
             Nova
             <br />
