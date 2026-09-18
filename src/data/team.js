@@ -1,35 +1,32 @@
-import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
+import shahin from "../assets/shahin.jpeg"
+import shmaim from "../assets/shamim.jpeg"
+import siraj from "../assets/siraj.png"
+import siyam from "../assets/siyam.jpeg"
 
-const socials = [
-  { label: "GitHub", icon: Github, href: "#" },
-  { label: "LinkedIn", icon: Linkedin, href: "#" },
-  { label: "Facebook", icon: Facebook, href: "#" },
-  { label: "Instagram", icon: Instagram, href: "#" },
-];
 
 export const team = [
   {
-    name: "Your Name",
+    name: "Shahin Ahmend",
     role: "Full-Stack Developer",
     description: "Builds complete products with thoughtful interfaces and reliable systems.",
-    socials,
+    image: shahin,
   },
   {
-    name: "Team Member",
+    name: "Shamim Ahmend",
     role: "Frontend Developer",
     description: "Turns visual direction into fast, responsive, polished user experiences.",
-    socials,
+    image: shmaim,
   },
   {
-    name: "Team Member",
+    name: "Shahzahan Siraj",
     role: "Backend Developer",
     description: "Designs secure APIs, data models, integrations, and scalable foundations.",
-    socials,
+    image: siraj,
   },
   {
-    name: "Team Member",
+    name: "Siyam Ahmend",
     role: "UI/UX Designer",
     description: "Shapes product clarity through research, structure, and refined visual systems.",
-    socials,
+    image: siyam,
   },
 ];
