@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import ImagePlaceholder from "./ImagePlaceholder";
 
+
 export default function ProjectCard({ project, index }) {
   return (
     <article
@@ -10,7 +11,7 @@ export default function ProjectCard({ project, index }) {
     >
       <div className="project-image overflow-hidden">
         <ImagePlaceholder className="h-full min-h-[320px] rounded-none transition-transform duration-500 group-hover:scale-[1.03]">
-          Add project screenshot here later
+            <img src={project.image} alt="Web design and development agency" className="h-full w-full object-cover scale-125" />
         </ImagePlaceholder>
       </div>
 
@@ -36,7 +37,7 @@ export default function ProjectCard({ project, index }) {
         </div>
 
         <a
-          href="#contact"
+          href={project.link}
           className="mt-10 inline-flex w-fit items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-sm font-semibold text-ink transition-all duration-300 hover:border-ink hover:bg-ink hover:text-white"
         >
           View Project
