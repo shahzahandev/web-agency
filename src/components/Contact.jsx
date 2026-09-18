@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { Facebook, Github, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Button from "./Button";
 import SectionHeader from "./SectionHeader";
 import { useGsap } from "../hooks/useGsap";
@@ -8,13 +8,6 @@ const contactItems = [
   { icon: Mail, label: "Email", value: "novastudio@gmail.com", href: "mailto:novastudio@gmail.com" },
   { icon: Phone, label: "Phone", value: "+880 1785405909", href: "tel:+8801785405909" },
   { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh", href: "#" },
-];
-
-const socialLinks = [
-  { icon: Facebook, label: "Facebook", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
 ];
 
 const initialForm = {
@@ -139,22 +132,6 @@ export default function Contact() {
                     <span className="block text-sm text-white/45">{item.label}</span>
                     <span className="font-semibold text-white">{item.value}</span>
                   </span>
-                </a>
-              );
-            })}
-          </div>
-
-          <div className="contact-animate mt-8 flex gap-3">
-            {socialLinks.map((social) => {
-              const Icon = social.icon;
-              return (
-                
-                <a  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-white transition hover:border-acid hover:bg-acid hover:text-ink"
-                >
-                  <Icon className="h-5 w-5" />
                 </a>
               );
             })}

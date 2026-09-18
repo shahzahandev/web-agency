@@ -1,4 +1,4 @@
-import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Github, Instagram, Linkedin, Sparkles } from "lucide-react";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
@@ -23,8 +23,8 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-start">
           <div>
             <a href="#home" className="inline-flex items-center gap-3" aria-label="Nova Studio home">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-ink text-sm font-black text-acid">
-                N
+                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-ink text-acid">
+                <Sparkles className="h-5 w-5" />
               </span>
               <span className="font-display text-lg font-bold uppercase tracking-[0.18em] text-ink">
                 Nova Studio
@@ -36,17 +36,7 @@ export default function Footer() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2">
-            <nav className="flex flex-wrap gap-3 lg:justify-end" aria-label="Footer navigation">
-              {footerLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="rounded-full border border-ink/10 px-4 py-2 text-sm font-semibold text-muted transition hover:border-ink hover:text-ink"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
+        
             <div className="flex gap-3 sm:justify-end">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
