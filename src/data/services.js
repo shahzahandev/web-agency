@@ -57,7 +57,7 @@ export const services = [
   {
     number: "08",
     icon: LifeBuoy,
-    title: "Maintenance & Support",
+    title: "ERM, CRM and ERP Software",
     description: "Keep websites secure, updated, optimized, and reliable.",
   },
 ];

@@ -9,7 +9,7 @@ export const projects = [
     number: "01",
     title: "Nova Market",
     category: "E-commerce Platform",
-    technology: ["Tailwind", "GSPAP", "React", "Node.js", "Express", "MongoDB"],
+    technology: ["Tailwind", "JavaScript", "JWT", "Cloudinary", "GSAP", "React", "Node.js", "Express", "MongoDB"],
     description:
       "A modern e-commerce platform with product management, authentication, shopping cart, order management, and admin dashboard.",
     image: novafrontend,
@@ -27,9 +27,9 @@ export const projects = [
   },
   {
     number: "03",
-    title: "E-Mart",
+    title: "E-Earbuds",
     category: "Business Website",
-    technology: ["React", "Express", "Node", "SSL", "MongoDB"],
+    technology: ["React", "JavaScript", "Tailwind", "Express", "Node", "SSL", "Multer", "JWT", "MongoDB"],
     description:
       "A patient-focused healthcare platform with secure accounts, appointment flows, and operational dashboards.",
     image: earbuds,
@@ -37,9 +37,9 @@ export const projects = [
   },
   {
     number: "04",
-    title: "Bakery Store",
+    title: "Bakery Management",
     category: "Business Website",
-    technology: ["React", "Tailwind", "TypeScript", "GSAP"],
+    technology: ["React", "Node", "Express", "GSAP", "JavaScript", "TypeScript"],
     description:"A polished studio website with editorial sections, smooth animation, responsive layouts, and flexible content blocks.",
     image: bekary,
     link: "https://sweet-treats-supabase.vercel.app/",
